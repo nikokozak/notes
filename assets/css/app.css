@@ -1,0 +1,57 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "quill/dist/quill.core.css";
+@import "quill/dist/quill.snow.css";
+@import "tailwindcss/utilities";
+
+@layer components {
+  .quill-wrapper {
+    @apply bg-white rounded-lg shadow-md border border-gray-200;
+  }
+
+  .ql-toolbar.ql-snow {
+    @apply border-0 border-b border-gray-200 bg-gray-50 rounded-t-lg;
+  }
+
+  .ql-container.ql-snow {
+    @apply border-0 rounded-b-lg;
+  }
+
+  .ql-editor {
+    min-height: 200px;
+    @apply max-w-none;
+  }
+
+  .ql-toolbar.ql-snow .ql-formats {
+    @apply mr-2;
+  }
+
+  .ql-snow.ql-toolbar button {
+    @apply p-1 hover:bg-gray-200 rounded;
+  }
+
+  .ql-snow .ql-picker {
+    @apply text-sm;
+  }
+
+  /* Editor content styles */
+  .ql-editor h1 {
+    @apply text-3xl font-bold mb-4;
+  }
+
+  .ql-editor h2 {
+    @apply text-2xl font-bold mb-3;
+  }
+
+  .ql-editor p {
+    @apply mb-2;
+  }
+
+  .ql-editor ul {
+    @apply list-disc ml-4 mb-2;
+  }
+
+  .ql-editor ol {
+    @apply list-decimal ml-4 mb-2;
+  }
+}
